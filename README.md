@@ -1,0 +1,1 @@
+# ordenacao-log-quadratica
