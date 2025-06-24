@@ -1,0 +1,5 @@
+Tamanho,SelectionSort(ms),LogQuadratica(ms),Cubica(ms)
+10,0,2,0
+100,11,13,18
+1000,134,256,8574
+2000,343,613,67032

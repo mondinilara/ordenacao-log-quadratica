@@ -24,12 +24,12 @@ cd seu-repositorio
 
 2. Compile o projeto (Java 8+):
 ```bash
-javac OrdenacaoLogQuadratica.java
+javac AlgoritmosOrdenacao.java
 ```
 
 3. Execute o algoritmo:
 ```bash
-java OrdenacaoLogQuadratica <arquivo_de_entrada>
+java AlgoritmosOrdenacao <arquivo_de_entrada>
 ```
 
 ## ⚠ Notas
