@@ -59,7 +59,6 @@ public class AlgoritmosOrdenacao {
             return;
         }
         int n = array.length;
-        // long count = 0;
 
         for (int i = 0; i < n - 1; i++) {
             int indiceDoMinimo = i;
@@ -69,7 +68,6 @@ public class AlgoritmosOrdenacao {
                 for (int k = 0; k < n; k++) {
                     AtomicLong count = new AtomicLong(0);
                     count.incrementAndGet();
-                    // count += (k % 101) - (count & 1) * 10000;
                 }
 
                 if (array[j] < array[indiceDoMinimo]) {
@@ -95,7 +93,6 @@ public class AlgoritmosOrdenacao {
         }
         int n = array.length;
         final int espera = (int) (Math.log(n) / Math.log(2)) + 1;
-        // long count = 0;
 
         for (int i = 0; i < n - 1; i++) {
             int indiceDoMinimo = i;
@@ -105,7 +102,6 @@ public class AlgoritmosOrdenacao {
                 for (int k = 0; k < espera; k++) {
                     AtomicLong count = new AtomicLong(0);
                     count.incrementAndGet();
-                    // count += (k % 101) - (count & 1) * 10000;
                 }
 
                 if (array[j] < array[indiceDoMinimo]) {
@@ -296,6 +292,13 @@ public class AlgoritmosOrdenacao {
         }
     }
 
+    /**
+     * Ordena arrays de tamanhos especificados e gera um arquivo CSV com os
+     * resultados dos tempos de execução.
+     * 
+     * @param tamanhos
+     * @param nomeArquivo
+     */
     public static void ordenaEGeraArquivoCsv(int[] tamanhos, String nomeArquivo) {
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(nomeArquivo))) {
             bw.write("Tamanho,Tempo(ms)\n");
@@ -327,10 +330,11 @@ public class AlgoritmosOrdenacao {
         float[] array = lerArrayDeArquivo(args[0]);
         selectionSortLogQuadratico(array);
 
-        // ordenaEGeraArquivoCsv(new int[] { 10, 100, 1000, 10000 }, "resultados.csv");
         // for (int i = 1; i < 6; i++) {
+        // ordenaEGeraArquivoCsv(new int[] { 100, 1000, 10000, 20000 },
+        // "resultadosLogQuadratico_" + i + ".csv");
         // executarAnaliseEmpirica(new int[] { 10, 100, 1000, 2000 },
-        // "resultados_ordenadoDecrescente_" + i + ".csv");
+        // "resultadosv2_" + i + ".csv");
         // }
     }
 }
